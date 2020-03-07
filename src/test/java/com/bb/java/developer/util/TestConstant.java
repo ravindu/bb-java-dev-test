@@ -1,0 +1,45 @@
+package com.bb.java.developer.util;
+
+public interface TestConstant {
+
+    String EVENT_ID_1= "EVT_1";
+
+    String EVENT_ID_2= "EVT_2";
+
+    String EVENT_ID_3= "EVENT_3";
+
+    String EVENT_ID_4= "EVENT_4";
+
+    String FIRST_PRODUCT_NAME= "PRODUCT_1";
+
+    String SECOND_PRODUCT_NAME= "PRODUCT_2";
+
+    String THIRD_PRODUCT_NAME= "PRODUCT_3";
+
+    String FOURTH_PRODUCT_NAME= "PRODUCT_4";
+
+    int FIRST_PRODUCT_QUANTITY= 1;
+
+    int SECOND_PRODUCT_QUANTITY= 3;
+
+    int THIRD_PRODUCT_QUANTITY= 2;
+
+    int FOURTH_PRODUCT_QUANTITY= 4;
+
+    double FIRST_PRODUCT_SALE_PRICE= 3.45;
+
+    double SECOND_PRODUCT_SALE_PRICE= 5.45;
+
+    double THIRD_PRODUCT_SALE_PRICE=7.45;
+
+    double FOURTH_PRODUCT_SALE_PRICE=8.45;
+
+    String EVENT_TIMESTAMP= "2020-03-05T23:55:53.111032+08:00";
+
+    long FIRST_PRODUCT_ID= 12345678897L;
+
+    long SECOND_PRODUCT_ID= 12345678898L;
+
+    long THIRD_PRODUCT_ID= 12345678899L;
+
+}

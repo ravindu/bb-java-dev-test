@@ -1,0 +1,50 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /producerservice
+
+spring:
+  application:
+    name: bb-java-developer-test
+  datasource:
+    url: jdbc:h2:mem:bb_database;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    testWhileIdle: true
+    validationQuery: 'SELECT 1'
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+      hibernate:
+        ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+
+cache:
+  redis:
+    url: localhost
+    port: 6379
+
+product:
+  request:
+    validation:
+      message:
+        id: Product id cannot be null.
+        name: Product name cannot be null.
+        quantity: Product quantity cannot be negative value.
+        minSaleAmount: product price should be positive.
+        minSaleAmountRange: Prodcut sale amount allow two decimal points only.
+        productRequestId: product request id cannot be null.
+        productList: Product list cannot be empty.
+        productRequestMapperError: Couldn't map product request to event entity.
+        eventNotFound: Event id couldn't find in database.
+        productRequestTimestamp: Event timestamp cannot be null.
+        internalServerError: Error occurred. Please contact BB support.

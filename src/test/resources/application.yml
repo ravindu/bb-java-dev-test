@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: integration
+app:
+  endpoint:
+    timeout: 10000
+http:
+  connectionTimeout: 5000
+  readTimeout: 5000
+
+server:
+  port: 8083
+  servlet:
+    context-path: /producerservice
