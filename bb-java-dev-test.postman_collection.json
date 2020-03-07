@@ -1,0 +1,105 @@
+{
+	"id": "6f2f7dc2-c224-ef24-3efe-6804f304a130",
+	"name": "bb-java-dev-test",
+	"description": "",
+	"order": [
+		"7fc541d1-74d4-ca1a-7fd2-da88136b9e89",
+		"80221e4f-6ce3-0c5e-cb79-5ae4adc83908",
+		"2d1d2d49-ef5f-5a9b-f9bc-fd419ba55b61"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1583163863136,
+	"owner": "2246362",
+	"public": false,
+	"requests": [
+		{
+			"id": "2d1d2d49-ef5f-5a9b-f9bc-fd419ba55b61",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8083/producerservice/api/v1/products",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1583579712765,
+			"name": "getAllProducts",
+			"description": "",
+			"collectionId": "6f2f7dc2-c224-ef24-3efe-6804f304a130",
+			"responses": []
+		},
+		{
+			"id": "7fc541d1-74d4-ca1a-7fd2-da88136b9e89",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8083/producerservice/api/v1/products",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1583579541073,
+			"name": "addProduct",
+			"description": "",
+			"collectionId": "6f2f7dc2-c224-ef24-3efe-6804f304a130",
+			"responses": [],
+			"rawModeData": "{\n  \"id\": \"EVT_7\",\n  \"timestamp\": \"2020-03-05T23:55:53.111032+08:00\",\n  \"products\": [\n    {\n      \"id\": 88121022358,\n      \"name\": \"Product_rav\",\n      \"quantity\": -1,\n      \"sale_amount\": 40.45\n    }\n    \n  ]\n}"
+		},
+		{
+			"id": "80221e4f-6ce3-0c5e-cb79-5ae4adc83908",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8083/producerservice/api/v1/product/EVT_7",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1583584817984,
+			"name": "getProduct",
+			"description": "",
+			"collectionId": "6f2f7dc2-c224-ef24-3efe-6804f304a130",
+			"responses": []
+		}
+	]
+}
