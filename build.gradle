@@ -1,11 +1,3 @@
-/*buildscript {
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.1.3.RELEASE"
-	}
-}*/
 plugins {
 	id 'org.springframework.boot' version '2.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
@@ -14,7 +6,6 @@ plugins {
 	id 'jacoco'
 }
 
-//apply plugin: 'spring-cloud-contract'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'maven-publish'
@@ -65,18 +56,20 @@ dependencies {
 		exclude group: 'io.swagger', module: 'swagger-models'
 	}
 	implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+	implementation "io.swagger:swagger-models:${swaggerModelVersion}"
 	implementation "com.bb.java.developer:bb-java-developer-test-api:${apiVersion}"
 	implementation 'org.apache.commons:commons-lang3:3.0'
 	implementation 'org.flywaydb:flyway-core'
 	implementation "org.hibernate:hibernate-envers:${enversVersion}"
 	compile 'com.h2database:h2:1.4.199'
+	compile "io.springfox:springfox-swagger2:2.9.2"
+	compile "io.springfox:springfox-swagger-ui:2.9.2"
 
 
 	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 	annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	//testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
 	testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
 	testImplementation "io.cucumber:cucumber-jvm:${cucumberVersion}"
 	testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
@@ -85,9 +78,7 @@ dependencies {
 	testImplementation "org.junit.vintage:junit-vintage-engine:${jupiterEngineVersion}"
 	testImplementation "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
 	testImplementation "org.projectlombok:lombok:${lombokVersion}"
-	//testCompile "org.springframework.cloud:spring-cloud-starter-contract-stub-runner"
 	testImplementation 'io.projectreactor:reactor-test'
-	//testCompile group: 'org.springframework.cloud', name: 'spring-cloud-contract-wiremock', version: '2.2.1.RELEASE'
 	testRuntimeOnly 'com.h2database:h2'
 	testImplementation 'org.flywaydb:flyway-core'
 	testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'

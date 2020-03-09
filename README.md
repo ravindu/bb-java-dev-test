@@ -46,7 +46,9 @@ http://localhost:8083/producerservice/api/v1/products
 
 - Spring WebFlux Non-Blocking endpoint implementation.
 - Cucumber Integration Testing (BDD Test cases).
+- TDD (JUnit test cases)
 - Cache implementation.
+- Api validation and Exception handling
 - Coding best practices.
     Programming to interface
     SRP
